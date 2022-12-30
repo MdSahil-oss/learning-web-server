@@ -1,8 +1,8 @@
 const http = require("http");
 const fs = require('fs').promises;
 
-const host = 'localhost';
-const port = 8080;
+const host = 'http://localhost';
+const port = 3000;
 
 const books = JSON.stringify([
     { title: "The Alchemist", author: "Paulo Coelho", year: 1988 },
@@ -75,6 +75,6 @@ const requestListener = function (req, res) {
 };
 
 const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+server.listen(port, () => {
+    console.log(`Server is running on ${host}:${port}`);
 });
