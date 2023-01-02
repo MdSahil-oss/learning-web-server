@@ -1,0 +1,5 @@
+services:
+  basic-webserver:
+    image: mdsahiloss/basic-webserver
+    ports:
+      - 80:3000
